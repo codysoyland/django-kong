@@ -50,7 +50,7 @@ Results for {{ result }}
 
 <script type="text/javascript">
 $(function () {
-    var data = [ {{ flot_list }} ]
+    var data = [ {{ flot_list|to_json }} ];
 
     var options = {
         label: '{{ result.test.name }}',

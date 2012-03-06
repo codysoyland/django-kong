@@ -27,7 +27,8 @@
 <script type="text/javascript">
 {% for site_test_slug, results in flot_list.items %}
     $(function () {
-            var data = [{{ results }}]
+            var data = [{{ results|to_json }}];
+
             var options = {
                 xaxis: {
                     ticks: [],

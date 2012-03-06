@@ -1,4 +1,5 @@
 from django import template
+import json
 
 register = template.Library()
 
@@ -9,3 +10,7 @@ def micro_to_milli(value):
 @register.filter
 def render_twill(result):
     return result.test.render(result.site)
+
+@register.filter
+def to_json(value):
+    return json.dumps(value)

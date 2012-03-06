@@ -21,7 +21,7 @@ Results for {{ test }}
 <script type="text/javascript">
 {% for site_test_slug, results in flot_list %}
 $(function () {
-    var data = [ {{ results }} ]
+    var data = [ {{ results|to_json }} ];
 
     var options = {
         label: '{{ result.test.name }}',
