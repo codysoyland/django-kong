@@ -4,8 +4,6 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-     (r'^admin/', include(admin.site.urls)),
      url(r'^$', 'kong.views.index', name='kong_index'),
      url(r'index/$', 'kong.views.index', name='kong_index'),
      url(r'failed/$', 'kong.views.failed', name='kong_failed'),
